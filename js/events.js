@@ -87,3 +87,4 @@ export function setupGameButtons() {
     ui.showSettings();
   };
 }
+// Eventlar

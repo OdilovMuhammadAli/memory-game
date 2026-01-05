@@ -2,61 +2,57 @@
 // Tema – raqamlar yoki ikonlar
 export let theme = "numbers";
 
-// Oyinchilar soni, default 1
+// Oyinchilar soni,ozi 1
 export let playersCount = 1;
 
-// Grid hajmi (4x4 yoki 6x6)
+// 4x4 yoki 6x6
 export let gridSize = 4;
 
-// Oyinda ishlatiladigan barcha kartalar
+// cardlarni hammasi
 export let allCards = [];
 
-// Hozir ochilgan kartalar
+//ui da ochib korgan cardlar
 export let openCards = [];
 
-// Topilgan juftliklar soni
+// Topganizdegi points
 export let foundPairs = 0;
 
-// Bosilgan harakatlar soni
+// nechta hod qilganingiz
 export let movesCount = 0;
 
-// Oyin davomiyligi (sekundlarda)
+// oyin davomiliigi
 export let timeSeconds = 0;
 
-// Taymerni saqlash
+// taymer
 export let timerInterval = null;
 
-// Hozirgi oyinchi indeksi (0,1,2...)
+//qaysi oyinchi index orqali korsatvolamiz
 export let currentPlayerIndex = 0;
 
 // Har bir oyinchi uchun juftliklar soni
 export let playerScores = [];
 
-// Kartalarni tekshiryapmizmi (true/false)
+// Kartalarni tekshiryapmizmi
 export let isChecking = false;
 
-// ========================================
-//       Sozlamalarni yangilash
-// ========================================
+//       Settings yangilash
 
 export function setTheme(value) {
-  // Tema ozgartirish (numbers/icons)
+  // numbers yoki icon temasi
   theme = value;
 }
 
 export function setPlayersCount(value) {
-  // Oyinchilar sonini ozgartirish
+  //  1-2-3-4 oyinchilarning necta bolishini tanlash
   playersCount = value;
 }
 
 export function setGridSize(value) {
-  // Grid olchamini ozgartirish
+  // 4x4 yoki 6x6?
   gridSize = value;
 }
 
-// ========================================
 //       Oyin holatini yangilash
-// ========================================
 
 export function setAllCards(cards) {
   // Barcha kartalarni oyin holatiga qoyish
@@ -74,17 +70,17 @@ export function clearOpenCards() {
 }
 
 export function incrementFoundPairs() {
-  // Topilgan juftliklar sonini 1 ga oshirish
+  // Topillsa +1
   foundPairs++;
 }
 
 export function incrementMoves() {
-  // Harakatlar sonini 1 ga oshirish
+  // Harakatlar soni+1
   movesCount++;
 }
 
 export function incrementTime() {
-  // Taymerni 1 sekundga oshirish
+  // Taymerni +1
   timeSeconds++;
 }
 
@@ -94,7 +90,7 @@ export function setTimerInterval(interval) {
 }
 
 export function clearTimer() {
-  // Agar taymer ishlayotgan bolsa, uni toxtatish
+  // Agar taymer islarsa ochirish infiniti bolib ketmasligi kerak
   if (timerInterval) {
     clearInterval(timerInterval);
     timerInterval = null;
@@ -102,12 +98,12 @@ export function clearTimer() {
 }
 
 export function setIsChecking(value) {
-  // Kartalarni tekshiryapmizmi, flagni ozgartirish
+  // Kartalarni tekshiryapmizmi
   isChecking = value;
 }
 
 export function incrementPlayerScore(index) {
-  // Berilgan oyinchi juftliklar sonini 1 ga oshirish
+  // Berilgan oyinchi juftliklar sonini +1
   playerScores[index]++;
 }
 
@@ -117,19 +113,17 @@ export function nextPlayer() {
 }
 
 export function initPlayerScores() {
-  // Har bir oyinchi uchun skorlarni 0 ga ornatish
+  // Har bir oyinchi uchun skorlarni 0 ga ornatish boshlanishi chunki
   playerScores = [];
   for (let i = 0; i < playersCount; i++) {
     playerScores.push(0);
   }
 }
 
-// ========================================
 //           Holatni tozalash
-// ========================================
 
 export function resetGame() {
-  // Oyinni tozalash: ochilgan kartalar, topilgan juftliklar, moves, vaqt, navbat
+  // Oyinni tozalash: ochilgan kartalar, topilgan juftliklar, moves, vaqt, navbat...
   openCards = [];
   foundPairs = 0;
   movesCount = 0;

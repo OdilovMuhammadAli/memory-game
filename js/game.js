@@ -5,14 +5,12 @@ import { makeCards } from "./cards.js";
 // Oyinni boshlash
 
 export function startGame() {
-  // Oyinni reset qilish
   state.resetGame();
 
-  // Kartalarni yaratish va saqlash
+  // Kartalarni yaratish va saqlash va ui-ni yangilaymiz
   let cards = makeCards();
   state.setAllCards(cards);
 
-  // UI-ni yangilash
   ui.hideSettings();
   ui.renderCards(cards, clickCard);
   ui.updateTime(0);
@@ -57,7 +55,7 @@ function checkCards() {
 
   const isMatch = state.allCards[index1] === state.allCards[index2];
 
-  // Kichik delay bilan tekshirish
+  //  delay bilan tekshirish
   setTimeout(() => {
     if (isMatch) {
       // Togri juftlik
@@ -93,7 +91,8 @@ function checkCards() {
     // Ochilgan kartalarni tozalash va tekshirish tugadi
     state.clearOpenCards();
     state.setIsChecking(false);
-  }, 600); // 0.6 soniya delay yetarli
+  }, 600);
+//   6-7 milisekund
 }
 
 // Oyinni tugatish
