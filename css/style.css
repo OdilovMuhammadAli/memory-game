@@ -5,73 +5,75 @@
 
 body {
   margin: 0;
-  min-height: 100vh;
   background: #152938;
+  color: #fff;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.title {
-  color: white;
-  margin-bottom: 40px;
-  font-size: 40px;
-  letter-spacing: 2px;
+.hidden {
+  display: none;
+}
+
+#menu h1 {
+  text-align: center;
 }
 
 .card {
-  background: white;
-  padding: 40px;
-  border-radius: 20px;
-  width: 420px;
+  background: #fff;
+  color: #152938;
+  padding: 25px;
+  border-radius: 15px;
+  width: 320px;
 }
 
-.section {
-  margin-bottom: 25px;
-}
-
-.label {
-  color: #7191a5;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.row {
+.buttons {
   display: flex;
-  gap: 12px;
+  gap: 10px;
+  margin-bottom: 15px;
 }
 
-.btn {
+button {
   flex: 1;
-  padding: 14px 0;
+  padding: 10px;
   border: none;
-  border-radius: 26px;
+  border-radius: 20px;
+  cursor: pointer;
   background: #bcced9;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
+  transition: 0.3s;
 }
 
-.btn.small {
-  flex: none;
-  width: 60px;
-}
-
-.btn.active {
+button.active {
   background: #304859;
+  color: #fff;
 }
 
-.start {
-  width: 100%;
+#start {
+  background: orange;
+  color: #fff;
+  font-size: 18px;
   margin-top: 10px;
-  padding: 16px 0;
-  border: none;
-  border-radius: 35px;
-  background: #fda214;
-  color: white;
-  font-size: 22px;
-  font-weight: bold;
+}
+
+#board {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.card-item {
+  background: #304859;
+  color: #fff;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+  height: 70px;
+}
+
+.card-item.open {
+  background: orange;
 }
