@@ -3,19 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>memory</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>memory-game-html-css-js</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <div class="settings-modal" id="settingsModal">
       <h2>memory</h2>
-
       <div class="setting-group">
         <label>Select Theme</label>
         <div class="options two-col">
@@ -23,7 +16,6 @@
           <button class="option-btn" id="themeIcons">Icons</button>
         </div>
       </div>
-
       <div class="setting-group">
         <label>Number of Players</label>
         <div class="options four-col">
@@ -33,7 +25,6 @@
           <button class="option-btn" id="players4">4</button>
         </div>
       </div>
-
       <div class="setting-group">
         <label>Grid Size</label>
         <div class="options two-col">
@@ -41,10 +32,8 @@
           <button class="option-btn" id="size6">6x6</button>
         </div>
       </div>
-
       <button class="start-btn" id="startBtn">Start Game</button>
     </div>
-
     <div class="game-container" id="gameContainer">
       <div class="game-header">
         <div class="game-logo">memory</div>
@@ -57,13 +46,10 @@
           </button>
         </div>
       </div>
-
       <div class="cards-wrapper">
         <div class="cards-grid" id="cardsGrid"></div>
       </div>
-
       <div class="players-panel" id="playersPanel"></div>
-
       <div class="status-panel" id="statusPanel">
         <div class="status-card">
           <span class="status-label">Time</span>
@@ -75,7 +61,6 @@
         </div>
       </div>
     </div>
-
     <div class="result-modal" id="resultModal">
       <div class="result-content">
         <h2 id="resultTitle">You did it!</h2>
@@ -91,7 +76,6 @@
         </div>
       </div>
     </div>
-
     <script type="module" src="./js/app.js"></script>
   </body>
 </html>

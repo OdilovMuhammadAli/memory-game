@@ -3,7 +3,7 @@ import * as ui from "./ui.js";
 import { makeCards } from "./cards.js";
 
 // Oyinni boshlash
-// --- Oyinni boshlash ---
+
 export function startGame() {
   // Oyinni reset qilish
   state.resetGame();
@@ -31,7 +31,7 @@ export function startGame() {
   state.setTimerInterval(interval);
 }
 
-// --- Kartaga bosish ---
+// - Kartaga bosish
 export function clickCard(index) {
   // Agar karta allaqachon ochilgan yoki tekshirish jarayoni bolsa, hech narsa qilmaymiz
   if (ui.isCardActive(index) || state.isChecking) return;
@@ -47,7 +47,7 @@ export function clickCard(index) {
   }
 }
 
-// --- Kartalarni tekshirish ---
+// - Kartalarni tekshirish
 function checkCards() {
   const [index1, index2] = state.openCards;
 
@@ -96,7 +96,7 @@ function checkCards() {
   }, 600); // 0.6 soniya delay yetarli
 }
 
-// --- Oyinni tugatish ---
+// Oyinni tugatish
 function finishGame() {
   // Timerni toxtatish
   state.clearTimer();
@@ -107,3 +107,4 @@ function finishGame() {
     ui.showResult(timeStr, state.movesCount);
   }, 300); // kichik delay bilan modalni korsatish
 }
+// delay bir ishni biroz vaqtga toxtatib turish dgani vazifasi esa ishlarni bosqichma-bosqich qilish

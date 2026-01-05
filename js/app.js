@@ -21,5 +21,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeGameUI();
 });
 //./events da bir nechta funksiyalar borligi uchun (setupThemeButtons, setupPlayersButtons............)
-// *as bu shunchaki nom berar ekan 
-// Assalomu alykum ustoz kopini ai oarqali nma qilishini va bersa bermasa qilishini xomentga yozzib ketganman
+// *as bu shunchaki nom berar ekan
+// Assalomu alykum ustoz kopini ai oarqali nma qilishini va bersa bermasa qilishini xomentga yozzib ketganman sizning logikangizdan  ham ishlatganman
